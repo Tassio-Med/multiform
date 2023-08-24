@@ -1,21 +1,24 @@
 import { Header } from "../Header"
 import { Sidebar } from "../Sidebar"
+import * as T from "./styles";
 
 
 export const Theme = () => {
   return(
-    <div>
-      <div>
-        <Header />
-      </div>
-      <div>
-        <Sidebar />
-        <Sidebar />
-        <Sidebar />
-      </div>
-      <div>
-        {/* Page  */}
-      </div>
-    </div>
+    <T.Container>
+      <T.Area>
+        <T.Steps>
+          <Header />
+          <T.Sidebar>
+            <Sidebar />
+            <Sidebar />
+            <Sidebar />
+          </T.Sidebar>
+          <T.Page>
+            {/* Page  */}
+          </T.Page>
+        </T.Steps>
+      </T.Area>
+    </T.Container>
   )
 }
