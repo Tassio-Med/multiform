@@ -1,7 +1,9 @@
+import { Theme } from "../../components/Theme"
+
 export const PageForm1 = () => {
   return(
-    <div>
+    <Theme>
       <h1>Página 01</h1>
-    </div>
+    </Theme>
   )
 }
