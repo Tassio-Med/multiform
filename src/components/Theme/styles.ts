@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   background-color: #0b090a;
-  color: #ffffff;
+  color: #fff;
   min-height: 100vh;
 `;
 
@@ -14,20 +14,18 @@ export const Area = styled.div`
   flex-direction: column;
 `;
 
-export const Sidebar = styled.div`
-  border-right: 1px solid #ba181b;
-  width: 100vh;
+export const Steps = styled.div`
+  flex: 1;
+  display: flex;
 `;
 
-export const Steps = styled.div`
-    flex: 1;
-    display: flex;
+export const Sidebar = styled.div`
+  width: 250px;
+  border-right: 1px solid #ba181b;
 `;
 
 export const Page = styled.div`
-    border: 1px solid #ba181b;
-    border-radius: 5px;
-    flex: 1;
-    padding-left: 40px;
-    padding-top: 40px;
+  flex: 1;
+  padding-left: 40px;
+  padding-top: 40px;
 `;
