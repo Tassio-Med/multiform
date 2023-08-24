@@ -1,7 +1,12 @@
+import * as F from "./styles";
+import { Theme } from "../../components/Theme";
+
 export const PageForm2 = () => {
   return(
-    <div>
-      <h1>Página 02</h1>
-    </div>
+    <Theme>
+      <F.Container>
+        Página 02
+      </F.Container>
+    </Theme>
   )
 }
