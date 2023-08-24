@@ -1,8 +1,17 @@
 import styled from 'styled-components';
 
 export const Header = styled.div`
-  background-color: #0b090a;
-  color: #ffffff;
-  min-height: 20vh;
+    padding: 25px 0;
+    border-bottom: 1px solid #ba181b;
+
+    h1 {
+        margin: 0;
+        padding: 0;
+        font-size: 28px;
+    }
+    h3 {
+        font-size: 14px;
+        color: #ffff;
+    }
 `;
 
