@@ -1,9 +1,12 @@
-function App() {
+import { FormProvider } from "./contexts";
+import { Router } from "./router";
 
+const App = () => {
   return (
-    <div>
-    </div>
+    <FormProvider>
+      <Router />
+    </FormProvider>
   )
 }
 
-export default App
+export default App;
