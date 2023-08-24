@@ -1,5 +1,5 @@
 import {  createContext, useReducer} from "react";
-import { State, FormProviderProps, FormActions, Action, ContextTypes } from "../types";
+import { State, FormProps, FormActions, Action, ContextTypes } from "../types";
 
 const initialData: State = {
   currentStep: 0,
@@ -32,7 +32,7 @@ const formReducer = (state: State, action: Action) => {
 
 // Provider
 
-export const FormProvider = ({children}: FormProviderProps) => {
+export const FormProvider = ({children}: FormProps) => {
   const [state, dispatch] = useReducer(formReducer, initialData);
   const value = { state, dispatch };
 

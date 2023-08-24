@@ -31,6 +31,6 @@ export type ContextTypes = {
   dispatch: (action: Action) => void;
 }
 
-export type FormProviderProps = {
+export type FormProps = {
   children: ReactNode;
 }
