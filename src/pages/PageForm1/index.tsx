@@ -1,18 +1,38 @@
+import { ChangeEvent, useEffect } from "react";
 import { Theme } from "../../components/Theme"
+import { useFormContext } from "../../contexts/useFormContext";
 import * as F from "./styles";
 import { useNavigate } from "react-router-dom";
+import { FormActions } from "../../types";
 
 export const PageForm1 = () => {
+  const {state, dispatch } = useFormContext();
   const navigate = useNavigate();
 
+  useEffect(() => {
+    dispatch({
+      type: FormActions.setCurrentStep,
+      payload: 1
+    });
+  });
+  
+
   const handleNextStep = () => {
-    navigate('/page2')
+    state.name !== "" ? navigate('/page2') : alert("Preenha o seu nome completo!");
   }
+
+  const handleNameChange = (e: ChangeEvent<HTMLInputElement>) => {
+    dispatch({
+      type: FormActions.setName,
+      payload: e.target.value
+    });
+  }
+
 
   return(
     <Theme>
       <F.Container>
-        <p> Passo 1/3</p>
+        <p> Passo 1/3 - {state.currentStep}</p>
         <h1>Queremos muito te conhecer</h1>
         <p>Preencha o campo abaixo com o seu nome completo.</p>
 
@@ -22,7 +42,9 @@ export const PageForm1 = () => {
           Seu nome completo
           <input
             type="text"
-            autoFocus  
+            autoFocus
+            value={state.name}
+            onChange={handleNameChange}
           />
 
           <button onClick={handleNextStep}>Próximo</button>
