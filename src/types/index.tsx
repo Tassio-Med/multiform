@@ -15,7 +15,7 @@ export type State = {
   email: string;
   github: string;
   telefone: string;
-  level: 0 | 1;
+  level: 0 | 1 | 2;
 }
 
 export type Action = 
@@ -24,7 +24,7 @@ export type Action =
 | { type: FormActions.setEmail, payload: string }
 | { type: FormActions.setGithub, payload: string }
 | { type: FormActions.setTelefone, payload: string }
-| { type: FormActions.setLevel, payload: 0 | 1 }
+| { type: FormActions.setLevel, payload: number }
 
 export type ContextTypes = {
   state: State;
@@ -33,4 +33,12 @@ export type ContextTypes = {
 
 export type FormProps = {
   children: ReactNode;
+}
+
+export type SelectProps = {
+  isSelected: boolean,
+  icon: string,
+  title: string,
+  description: string,
+  onClick: () => void;
 }
