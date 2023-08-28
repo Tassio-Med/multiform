@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 import { FormActions } from "../../types";
 
 export const PageForm1 = () => {
-  const {state, dispatch } = useFormContext();
+  const { state, dispatch } = useFormContext();
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -14,11 +14,10 @@ export const PageForm1 = () => {
       type: FormActions.setCurrentStep,
       payload: 1
     });
-  });
-  
+  },[]);
 
   const handleNextStep = () => {
-    state.name !== "" ? navigate('/page2') : alert("Preenha o seu nome completo!");
+    return state.name !== "" ? navigate('/page2') : alert("Preenha o seu nome completo!");
   }
 
   const handleNameChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -28,11 +27,10 @@ export const PageForm1 = () => {
     });
   }
 
-
   return(
     <Theme>
       <F.Container>
-        <p> Passo 1/3 - {state.currentStep}</p>
+        <p> Passo 1/3</p>
         <h1>Queremos muito te conhecer</h1>
         <p>Preencha o campo abaixo com o seu nome completo.</p>
 
@@ -42,13 +40,13 @@ export const PageForm1 = () => {
           Seu nome completo
           <input
             type="text"
-            autoFocus
+            // autoFocus
             value={state.name}
             onChange={handleNameChange}
           />
+        </label>
 
           <button onClick={handleNextStep}>Próximo</button>
-        </label>
       </F.Container>
     </Theme>
   )
