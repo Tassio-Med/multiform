@@ -3,12 +3,13 @@ import styled from 'styled-components';
 export const Container = styled.div`
   background-color: #0b090a;
   color: #fff;
+  color: #FFF;
   min-height: 100vh;
 `;
-
+  
 export const Area = styled.div`
   margin: auto;
-  max-width: 980px;
+  padding: 25px;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
