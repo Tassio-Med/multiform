@@ -1,4 +1,4 @@
-import {  createContext, useReducer} from "react";
+import {  createContext, Reducer, useReducer} from "react";
 import { State, FormProps, FormActions, Action, ContextTypes } from "../types";
 
 const initialData: State = {
@@ -17,8 +17,10 @@ const formReducer = (state: State, action: Action) => {
   switch(action.type){
     case FormActions.setCurrentStep:
       return { ...state, currentStep: action.payload };
+    case FormActions.setName:
+      return {...state, name: action.payload};
     case FormActions.setEmail:
-      return { ...state, name: action.payload};
+      return { ...state, email: action.payload};
     case FormActions.setGithub:
       return { ...state, github: action.payload};
     case FormActions.setTelefone:
@@ -42,14 +44,4 @@ export const FormProvider = ({children}: FormProps) => {
     </FormContext.Provider>
   )
 }
-
-
-// Meu Context Hook
-// export const useFormContext = () => {
-//   const context = useContext(FormContext);
-//   if(context === undefined ) {
-//     throw new Error("Erro aí hem")
-//   }
-//   return context;
-// }
 
