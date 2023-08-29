@@ -13,20 +13,20 @@ const initialData: State = {
 
 export const FormContext = createContext<ContextTypes | undefined>(undefined);
 
-const formReducer = (state: State, action: Action) => {
+const formReducer: Reducer<State, Action> = (state, action) => {
   switch(action.type){
     case FormActions.setCurrentStep:
       return { ...state, currentStep: action.payload };
     case FormActions.setName:
-      return {...state, name: action.payload};
+      return {...state, name: action.payload };
     case FormActions.setEmail:
       return { ...state, email: action.payload};
     case FormActions.setGithub:
-      return { ...state, github: action.payload};
+      return { ...state, github: action.payload };
     case FormActions.setTelefone:
-      return { ...state, telefone: action.payload};
+      return { ...state, telefone: action.payload };
     case FormActions.setLevel:
-      return { ...state, level: action.payload};
+      return { ...state, level: action.payload };
     default:
       return state;
     }
