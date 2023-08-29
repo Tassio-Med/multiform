@@ -18,13 +18,12 @@ export type State = {
   level: 0 | 1 | 2;
 }
 
-export type Action = 
-| { type: FormActions.setCurrentStep, payload: number }
-| { type: FormActions.setName, payload: string }
-| { type: FormActions.setEmail, payload: string }
-| { type: FormActions.setGithub, payload: string }
-| { type: FormActions.setTelefone, payload: string }
-| { type: FormActions.setLevel, payload: number }
+export type Action = {
+  type: FormActions;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  payload: any;
+}
+
 
 export type ContextTypes = {
   state: State;
