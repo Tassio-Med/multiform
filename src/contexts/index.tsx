@@ -6,6 +6,7 @@ const initialData: State = {
   name: '',
   email: '',
   github: '',
+  linkedin: '',
   telefone: '',
   level: 0,
 }
@@ -23,6 +24,8 @@ const formReducer: Reducer<State, Action> = (state, action) => {
       return { ...state, email: action.payload};
     case FormActions.setGithub:
       return { ...state, github: action.payload };
+    case FormActions.setLinkedin:
+      return { ...state, linkedin: action.payload };
     case FormActions.setTelefone:
       return { ...state, telefone: action.payload };
     case FormActions.setLevel:
