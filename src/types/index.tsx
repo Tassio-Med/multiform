@@ -5,6 +5,7 @@ export enum FormActions {
   setName,
   setEmail,
   setGithub,
+  setLinkedin,
   setTelefone,
   setLevel,
 }
@@ -14,6 +15,7 @@ export type State = {
   name: string;
   email: string;
   github: string;
+  linkedin: string,
   telefone: string;
   level: 0 | 1 | 2;
 }
