@@ -15,7 +15,7 @@ export const PageForm2 = () => {
       type: FormActions.setCurrentStep,
       payload: 2
     });
-  });
+  },[dispatch]);
   
 
   const handleNextStep = () => {
@@ -32,9 +32,9 @@ export const PageForm2 = () => {
   return(
     <Theme>
       <F.Container>
-        <p> Passo 2/3 - {state.currentStep}</p>
+        <p> Passo 2/3</p>
         <h1>{state.name}, agora selecione o seu nível.</h1>
-        <p>Preencha o campo abaixo com o seu nome completo.</p>
+        <p>Selecione o campo que corresponde ou chegue mais perto do seu tempo na área de tecnologia.</p>
 
         <hr />
 
@@ -42,7 +42,7 @@ export const PageForm2 = () => {
           isSelected={state.level === 0}
           icon = "🥳"
           title = "Júnior"
-          description = "Sou desenvolvedor com dois anos de mercado"
+          description = "Sou desenvolvedor com 1 de mercado"
           onClick = {() => setLevel(0)}
         />
 
@@ -50,7 +50,7 @@ export const PageForm2 = () => {
           isSelected={state.level === 1}
           icon = "😎"
           title = "Pleno"
-          description = "Sou desenvolvedor com um três ou mais anos dde mercado"
+          description = "Sou desenvolvedor com um três ou mais anos de mercado"
           onClick = {() => setLevel(1)}
         />
 
@@ -58,7 +58,7 @@ export const PageForm2 = () => {
           isSelected={state.level === 2}
           icon = "🥸"
           title = "Sênior"
-          description = "Sou desenvolvedor com um cinco ou mais anos dde mercado"
+          description = "Sou desenvolvedor com um cinco ou mais anos de mercado"
           onClick = {() => setLevel(2)}
         />
 

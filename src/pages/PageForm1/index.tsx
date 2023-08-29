@@ -14,7 +14,7 @@ export const PageForm1 = () => {
       type: FormActions.setCurrentStep,
       payload: 1
     });
-  },[]);
+  },[dispatch]);
 
   const handleNextStep = () => {
     return state.name !== "" ? navigate('/page2') : alert("Preenha o seu nome completo!");
