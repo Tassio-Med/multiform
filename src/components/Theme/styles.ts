@@ -22,7 +22,7 @@ export const Steps = styled.div`
 
 export const Sidebar = styled.div`
   width: 250px;
-  border-right: 1px solid #ba181b;
+  border-right: 1px solid #1C1719;
 `;
 
 export const Page = styled.div`
