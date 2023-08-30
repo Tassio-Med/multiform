@@ -43,3 +43,11 @@ export type SelectProps = {
   description: string,
   onClick: () => void;
 }
+
+export type SidebarProps = {
+  icon: string,
+  title: string,
+  description: string,
+  path: string,
+  selected: boolean;
+}
