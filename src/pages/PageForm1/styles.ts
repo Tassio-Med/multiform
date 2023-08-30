@@ -13,7 +13,7 @@ export const Container = styled.div`
   hr {
     height: 1px;
     border: 0;
-    background-color: #16195C;
+    background-color: #1C1719;
     margin: 30px 0;
   }
 
@@ -26,17 +26,17 @@ export const Container = styled.div`
         box-sizing: border-box;
         width: 100%;
         padding: 20px 10px;
-        border: 2px solid #25CD89;
+        border: 2px solid #660708;
         border-radius: 10px;
         color: #FFF;
         outline: 0;
         font-size: 15px;
-        background-color: #02044A;
+        background-color: #0b090a;
     }
   }
 
   button {
-    background-color: #25CD89;
+    background-color: #660708;
     color: #FFF;
     font-size: 14px;
     font-weight: bold;
@@ -45,6 +45,10 @@ export const Container = styled.div`
     border-radius: 30px;
     cursor: pointer;
     margin-top: 30px;
+
+    &:hover {
+      background-color: #8c0c10;
+    }
   }
   
 `;
