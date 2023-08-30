@@ -3,10 +3,13 @@ import { Header } from "../Header"
 import { Sidebar } from "../Sidebar"
 import * as T from "./styles";
 import { useFormContext } from "../../contexts/useFormContext";
+// import { useNavigate } from "react-router-dom";
 
 
 export const Theme = ({children}: FormProps) => {
   const { state } = useFormContext();
+  // const navigate = useNavigate();
+  // state.name !== "" ? navigate('/page2') : alert("Preenha o seu nome completo!")
 
   return(
     <T.Container>
