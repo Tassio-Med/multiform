@@ -37,7 +37,7 @@ export type FormProps = {
 }
 
 export type SelectProps = {
-  isSelected: boolean,
+  isselected: boolean,
   icon: string,
   title: string,
   description: string,
