@@ -39,7 +39,7 @@ export const PageForm2 = () => {
         <hr />
 
         <SelectOption
-          isSelected={state.level === 0}
+          isselected={state.level === 0}
           icon = "🥳"
           title = "Júnior"
           description = "Sou desenvolvedor com 1 de mercado"
@@ -47,7 +47,7 @@ export const PageForm2 = () => {
         />
 
         <SelectOption
-          isSelected={state.level === 1}
+          isselected={state.level === 1}
           icon = "😎"
           title = "Pleno"
           description = "Sou desenvolvedor com um três ou mais anos de mercado"
@@ -55,7 +55,7 @@ export const PageForm2 = () => {
         />
 
         <SelectOption
-          isSelected={state.level === 2}
+          isselected={state.level === 2}
           icon = "🥸"
           title = "Sênior"
           description = "Sou desenvolvedor com um cinco ou mais anos de mercado"
