@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Header = styled.div`
     padding: 25px;
-    border-bottom: 1px solid #ba181b;
+    border-bottom: 1px solid #1C1719;
 
     h1 {
         margin: 0;
