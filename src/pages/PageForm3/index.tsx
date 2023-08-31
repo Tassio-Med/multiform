@@ -21,6 +21,16 @@ export const PageForm3 = () => {
     }
   }, []);
 
+
+  const handleNextStep = () => {
+    if(state.linkedin !== '' && state.github !== '' && state.telefone !== '') {
+      navigate('/page4');
+      console.log(state);
+    } else {
+        alert("Preencha os dados");
+    }
+  }
+
   const handleGithubChange = (e: ChangeEvent<HTMLInputElement>) => {
     dispatch({
       type: FormActions.setGithub,
@@ -40,15 +50,6 @@ export const PageForm3 = () => {
       type: FormActions.setTelefone,
       payload: e.target.value
     });
-  }
-
-  const handleNextStep = () => {
-    if(state.email !== '' && state.github !== '' ) {
-      // navigate('/page4');
-      console.log(state);
-    } else {
-        alert("Preencha os dados");
-    }
   }
 
 
