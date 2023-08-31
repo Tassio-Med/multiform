@@ -11,11 +11,15 @@ export const PageForm3 = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    dispatch({
-      type: FormActions.setCurrentStep,
-      payload: 3
-    });
-  }, [dispatch]);
+    if(state.name === ''){
+      navigate('/')
+    } else {
+      dispatch({
+        type: FormActions.setCurrentStep,
+        payload: 3
+      });
+    }
+  }, []);
 
   const handleGithubChange = (e: ChangeEvent<HTMLInputElement>) => {
     dispatch({
@@ -39,8 +43,8 @@ export const PageForm3 = () => {
   }
 
   const handleNextStep = () => {
-    if(state.email !== '' && state.github !== '' && state.telefone !== '') {
-      navigate('/page4');
+    if(state.email !== '' && state.github !== '' ) {
+      // navigate('/page4');
       console.log(state);
     } else {
         alert("Preencha os dados");

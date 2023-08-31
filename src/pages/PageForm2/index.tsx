@@ -11,11 +11,15 @@ export const PageForm2 = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    dispatch({
-      type: FormActions.setCurrentStep,
-      payload: 2
-    });
-  },[dispatch]);
+    if(state.name === ''){
+      navigate('/')
+    } else {
+      dispatch({
+        type: FormActions.setCurrentStep,
+        payload: 2
+      });
+    }
+  },[]);
   
 
   const handleNextStep = () => {
