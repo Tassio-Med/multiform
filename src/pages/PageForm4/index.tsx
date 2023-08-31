@@ -29,39 +29,43 @@ export const PageForm4 = () => {
     <Theme>
       <F.Container>
         <h1>Cadastro concluído com sucesso! ✅</h1>
-        <p>{state.name} muito obrigado por ter chegado até aqui. Abaixo estão os dados que você nos disponibilizou para concluir o seu cadastro.</p>
+        <p>{state.name}, muito obrigado por ter chegado até aqui. Abaixo estão os dados que você nos disponibilizou para concluir o seu cadastro.</p>
 
         <F.Box>
-          <h4>Nome</h4>
+          <h5>Nome</h5>
           <F.Data>
             <p>{state.name}</p>
           </F.Data>
         </F.Box>
 
-        <F.Box>
-          <h4>Nível</h4>
-          <F.Data>
-            <p>{ getLevel() }</p>
-          </F.Data>
-        </F.Box>
-        <F.Box>
-          <F.Data>
-            <h4>Github</h4>
-            <p>{state.github}</p>
-          </F.Data>
-        </F.Box>
-        <F.Box>
-          <F.Data>
-            <h4>Linkedin</h4>
-            <p>{state.linkedin}</p>
-          </F.Data>
-        </F.Box>
-        <F.Box>
-          <F.Data>
-            <h4>Telefone</h4>
-            <p>{state.telefone}</p>
-          </F.Data>
-        </F.Box>
+        <F.Dev>
+          <F.Box>
+            <h5>Nível</h5>
+            <F.Data>
+              <p>{ getLevel() }</p>
+            </F.Data>
+          </F.Box>
+          <F.Box>
+              <h5>Github</h5>
+            <F.Data>
+              <p>{state.github}</p>
+            </F.Data>
+          </F.Box>
+        </F.Dev>
+        <F.Dev>
+          <F.Box>
+              <h5>Linkedin</h5>
+            <F.Data>
+              <p>{state.linkedin}</p>
+            </F.Data>
+          </F.Box>
+          <F.Box>
+              <h5>Telefone</h5>
+            <F.Data>
+              <p>{state.telefone}</p>
+            </F.Data>
+          </F.Box>
+        </F.Dev>
 
         <Link to="/page3">Voltar</Link>
       </F.Container>
