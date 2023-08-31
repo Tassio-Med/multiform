@@ -15,6 +15,15 @@ export const PageForm4 = () => {
     });
   },[dispatch]);
 
+  const getLevel = () => {
+    if(state.level === 0) {
+      return "Júnior"
+    }else if(state.level === 1) {
+       return "Pleno"
+    } else {
+      return "Sênior"
+    }
+  };
 
   return(
     <Theme>
@@ -23,21 +32,35 @@ export const PageForm4 = () => {
         <p>{state.name} muito obrigado por ter chegado até aqui. Abaixo estão os dados que você nos disponibilizou para concluir o seu cadastro.</p>
 
         <F.Box>
-          <h4>Seu nivel</h4>
-          <p>{state.level}</p>
+          <h4>Nome</h4>
+          <F.Data>
+            <p>{state.name}</p>
+          </F.Data>
+        </F.Box>
+
+        <F.Box>
+          <h4>Nível</h4>
+          <F.Data>
+            <p>{ getLevel() }</p>
+          </F.Data>
         </F.Box>
         <F.Box>
-          <h4>Seus Github e seu Linkedin</h4>
-          <p>
-            <strong>Github:</strong> {state.github}
-          </p>
-          <p>
-            <strong>Linkedin:</strong> {state.linkedin}
-          </p>
+          <F.Data>
+            <h4>Github</h4>
+            <p>{state.github}</p>
+          </F.Data>
         </F.Box>
         <F.Box>
-          <h4>Seu número para entrarmos em contato</h4>
-          <p>{state.telefone}</p>
+          <F.Data>
+            <h4>Linkedin</h4>
+            <p>{state.linkedin}</p>
+          </F.Data>
+        </F.Box>
+        <F.Box>
+          <F.Data>
+            <h4>Telefone</h4>
+            <p>{state.telefone}</p>
+          </F.Data>
         </F.Box>
 
         <Link to="/page3">Voltar</Link>
