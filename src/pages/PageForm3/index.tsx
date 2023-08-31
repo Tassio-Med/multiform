@@ -23,12 +23,14 @@ export const PageForm3 = () => {
       payload: e.target.value
     });
   }
+
   const handleLinkedinChange = (e: ChangeEvent<HTMLInputElement>) => {
     dispatch({
       type: FormActions.setLinkedin,
       payload: e.target.value
     });
   }
+  
   const handleTelefoneChange = (e: ChangeEvent<HTMLInputElement>) => {
     dispatch({
       type: FormActions.setTelefone,
@@ -37,9 +39,14 @@ export const PageForm3 = () => {
   }
 
   const handleNextStep = () => {
-    state.name !== "" ? navigate('/page4') : alert("Preencha os dados informados!");
+    if(state.email !== '' && state.github !== '' && state.telefone !== '') {
+      navigate('/page4');
+      console.log(state);
+    } else {
+        alert("Preencha os dados");
+    }
   }
-  
+
 
   return(
     <Theme>
