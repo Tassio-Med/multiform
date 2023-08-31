@@ -40,7 +40,7 @@ export const PageForm4 = () => {
           <p>{state.telefone}</p>
         </F.Box>
 
-        <Link to="/page2">Voltar</Link>
+        <Link to="/page3">Voltar</Link>
       </F.Container>
     </Theme>
   )
