@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import styled from "styled-components";
 
 export const Container = styled.div`
@@ -44,7 +45,6 @@ export const Container = styled.div`
         border: 0;
         border-radius: 30px;
         cursor: pointer;
-        margin-top: 30px;
 
         &:hover {
             background-color: #8c0c10;
@@ -56,5 +56,25 @@ export const Container = styled.div`
         text-decoration: none;
         padding: 20px 40px;
         color: #B8B8D4;
+    }
+`;
+
+export const Buttons = styled.div`
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+`;
+
+export const Back = styled(Link)`
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    width: 80px;
+    margin-right: 20px;
+    
+    &:hover {
+        color: #fff;
     }
 `;
