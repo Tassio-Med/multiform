@@ -37,6 +37,12 @@ export const PageForm4 = () => {
             <p>{state.name}</p>
           </F.Data>
         </F.Box>
+        <F.Box>
+          <h5>Email</h5>
+          <F.Data>
+            <p>{state.email}</p>
+          </F.Data>
+        </F.Box>
 
         <F.Dev>
           <F.Box>
