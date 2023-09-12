@@ -19,6 +19,8 @@ export const Container = styled.div`
 
   label {
     font-size: 13px;
+    display: block;
+    
 
     input {
         display: block;
@@ -35,6 +37,11 @@ export const Container = styled.div`
     }
   }
 
+  label:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+
   button {
     background-color: #660708;
     color: #FFF;
@@ -44,7 +51,7 @@ export const Container = styled.div`
     border: 0;
     border-radius: 30px;
     cursor: pointer;
-    margin-top: 30px;
+    margin-top: 15px;
 
     &:hover {
       background-color: #8c0c10;

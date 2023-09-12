@@ -17,7 +17,7 @@ export const PageForm1 = () => {
   },[dispatch]);
 
   const handleNextStep = () => {
-    return state.name !== "" ? navigate('/page2') : alert("Preenha o seu nome completo!");
+    return state.name && state.email !== "" ? navigate('/page2') : alert("Preenha o seu nome completo!");
   }
 
   const handleNameChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -27,12 +27,19 @@ export const PageForm1 = () => {
     });
   }
 
+  const handleEmailChange = (e: ChangeEvent<HTMLInputElement>) => {
+    dispatch({
+      type: FormActions.setEmail,
+      payload: e.target.value
+    });
+  }
+
   return(
     <Theme>
       <F.Container>
         <p> Passo 1/3</p>
         <h1>Queremos muito te conhecer</h1>
-        <p>Preencha o campo abaixo com o seu nome completo.</p>
+        <p>Preencha os campos abaixo com o seu nome completo e e-mail.</p>
 
         <hr />
 
@@ -43,6 +50,15 @@ export const PageForm1 = () => {
             // autoFocus
             value={state.name}
             onChange={handleNameChange}
+          />
+        </label>
+        <label>
+          Seu email
+          <input
+            type="text"
+            // autoFocus
+            value={state.email}
+            onChange={handleEmailChange}
           />
         </label>
 
