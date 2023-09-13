@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import styled from "styled-components";
 
 export const Container = styled.div`
@@ -34,47 +34,5 @@ export const Container = styled.div`
             font-size: 15px;
             background-color: #0b090a;
         }
-    }
-
-    button {
-        background-color: #660708;
-        color: #FFF;
-        font-size: 14px;
-        font-weight: bold;
-        padding: 20px 40px;
-        border: 0;
-        border-radius: 30px;
-        cursor: pointer;
-
-        &:hover {
-            background-color: #8c0c10;
-        }
-    }
-
-    .backButton {
-        font-size: 16px;
-        text-decoration: none;
-        padding: 20px 40px;
-        color: #B8B8D4;
-    }
-`;
-
-export const Buttons = styled.div`
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    margin-top: 30px;
-`;
-
-export const Back = styled(Link)`
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    width: 80px;
-    margin-right: 20px;
-    
-    &:hover {
-        color: #fff;
     }
 `;

@@ -1,9 +1,10 @@
 import { useEffect } from "react";
 import { Theme } from "../../components/Theme"
+import { Buttons } from "../../components/Buttons";
 import { useFormContext } from "../../contexts/useFormContext";
 import * as F from "./styles";
 import { ChangeEvent } from "react";
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { FormActions } from "../../types";
 
 export const PageForm3 = () => {
@@ -52,12 +53,18 @@ export const PageForm3 = () => {
     });
   }
 
+  const firstName = () => {
+    const complete = state.name;
+    const first = complete.split(" ");
+    return first[0];
+  }
+
 
   return(
     <Theme>
       <F.Container>
         <p> Passo 3/3</p>
-        <h1>{state.name}, agora queremos ver os seus projetos e suas principais stacks.</h1>
+        <h1>{firstName()}, agora queremos ver os seus projetos e suas principais stacks.</h1>
         <p>Nos informe os dados requeridos abaixo. Todos os dados são importantes para você destacar no processo seletivo!</p>
 
         <hr />
@@ -89,10 +96,7 @@ export const PageForm3 = () => {
             onChange={handleTelefoneChange}
           />
         </label>
-
-
-        <Link to="/page2">Voltar</Link>
-        <button onClick={handleNextStep}>Próximo</button>
+        <Buttons prevLink="/page2" onNextClick={handleNextStep}/>
       </F.Container>
     </Theme>
   )

@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import { ReactNode, MouseEventHandler  } from "react";
 
 export enum FormActions {
   setCurrentStep,
@@ -50,4 +50,9 @@ export type SidebarProps = {
   description: string,
   path: string,
   selected: boolean;
+}
+
+export type ButtonProps = {
+  prevLink: string,
+  onNextClick: MouseEventHandler<HTMLButtonElement>;
 }

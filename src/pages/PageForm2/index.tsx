@@ -5,7 +5,8 @@ import * as F from "./styles";
 import { useNavigate } from "react-router-dom";
 import { FormActions } from "../../types";
 import { SelectOption } from "../../components/SelectOption";
-import { MdKeyboardDoubleArrowLeft as Arrow } from "react-icons/md"
+// import { MdKeyboardDoubleArrowLeft as Arrow } from "react-icons/md"
+import { Buttons } from "../../components/Buttons";
 
 export const PageForm2 = () => {
   const {state, dispatch } = useFormContext();
@@ -73,10 +74,7 @@ export const PageForm2 = () => {
           onClick = {() => setLevel(2)}
         />
 
-        <F.Buttons>
-          <F.Back to="/"><Arrow fontSize="23px"/>Voltar</F.Back>
-          <button onClick={handleNextStep}>Próximo</button>
-        </F.Buttons>
+        <Buttons prevLink="/" onNextClick={handleNextStep}/>
       </F.Container>
     </Theme>
   )

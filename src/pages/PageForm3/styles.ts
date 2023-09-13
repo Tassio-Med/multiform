@@ -34,27 +34,4 @@ export const Container = styled.div`
             background-color: #0b090a;
         }
     }
-
-    button {
-        background-color: #660708;
-        color: #FFF;
-        font-size: 14px;
-        font-weight: bold;
-        padding: 20px 40px;
-        border: 0;
-        border-radius: 30px;
-        cursor: pointer;
-        margin-top: 30px;
-
-        &:hover {
-            background-color: #8c0c10;
-        }
-    }
-
-    .backButton {
-        font-size: 16px;
-        text-decoration: none;
-        padding: 20px 40px;
-        color: #B8B8D4;
-    }
 `;
