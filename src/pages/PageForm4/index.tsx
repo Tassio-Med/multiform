@@ -25,11 +25,17 @@ export const PageForm4 = () => {
     }
   };
 
+  const firstName = () => {
+    const complete = state.name;
+    const first = complete.split(" ");
+    return first[0];
+  }
+
   return(
     <Theme>
       <F.Container>
         <h1>Cadastro concluído com sucesso! ✅</h1>
-        <p>{state.name}, muito obrigado por ter chegado até aqui. Abaixo estão os dados que você nos disponibilizou para concluir o seu cadastro.</p>
+        <p>{firstName()}, muito obrigado por ter chegado até aqui. Abaixo estão os dados que você nos disponibilizou para concluir o seu cadastro.</p>
 
         <F.Box>
           <h5>Nome</h5>

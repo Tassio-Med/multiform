@@ -34,11 +34,17 @@ export const PageForm2 = () => {
     });
   }
 
+  const firstName = () => {
+    const complete = state.name;
+    const first = complete.split(" ");
+    return first[0];
+  }
+
   return(
     <Theme>
       <F.Container>
         <p> Passo 2/3</p>
-        <h1>{state.name}, agora selecione o seu nível.</h1>
+        <h1>{ firstName() }, agora selecione o seu nível.</h1>
         <p>Selecione o campo que corresponde ou chegue mais perto do seu tempo na área de tecnologia.</p>
 
         <hr />
