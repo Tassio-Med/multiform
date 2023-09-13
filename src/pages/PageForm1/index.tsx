@@ -17,7 +17,12 @@ export const PageForm1 = () => {
   },[dispatch]);
 
   const handleNextStep = () => {
-    return state.name && state.email !== "" ? navigate('/page2') : alert("Preenha o seu nome completo!");
+    const completeName = state.name;
+    if(completeName.split(' ').length < 2 || state.email == "" ){
+      alert("Preenha seu nome completo e seu e-mail!")
+    } else {
+      navigate('/page2');
+    }
   }
 
   const handleNameChange = (e: ChangeEvent<HTMLInputElement>) => {
