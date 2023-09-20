@@ -3,6 +3,7 @@ import { Theme } from "../../components/Theme"
 import { useFormContext } from "../../contexts/useFormContext";
 import { FormActions } from "../../types";
 import { Link } from "react-router-dom";
+import { MdKeyboardDoubleArrowLeft as Arrow } from 'react-icons/md';
 import * as F from "./styles";
 
 export const PageForm4 = () => {
@@ -79,7 +80,11 @@ export const PageForm4 = () => {
           </F.Box>
         </F.Dev>
 
-        <Link to="/page3">Voltar</Link>
+        {/* <Link to="/page3">Voltar</Link> */}
+        <F.BackButton to="/page3">
+        <Arrow fontSize="23px" />
+        Voltar
+      </F.BackButton>
       </F.Container>
     </Theme>
   )

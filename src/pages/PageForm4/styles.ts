@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 export const Container = styled.div`
@@ -38,5 +39,20 @@ export const Data = styled.div`
 
 export const Dev = styled.div`
   display: flex;
+`;
+
+export const BackButton = styled(Link)`
+  margin-top: 30px;
+  font-size: 16px;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #B8B8D4;
+  width: 10%;
+
+  &:hover {
+    color: #fff;
+  }
 `;
 
