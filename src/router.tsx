@@ -3,6 +3,7 @@ import { PageForm1 } from "./pages/PageForm1";
 import { PageForm2 } from "./pages/PageForm2";
 import { PageForm3 } from "./pages/PageForm3";
 import { PageForm4 } from "./pages/PageForm4";
+// import { NotFound } from "./pages/NotFound";
 
 export const Router = () => {
   return (
@@ -11,6 +12,7 @@ export const Router = () => {
       <Route path="/page2" Component={ PageForm2 }/>
       <Route path="/page3" Component={ PageForm3 }/>
       <Route path="/page4" Component={ PageForm4 }/>
+      {/* <Route path="*" Component={ NotFound }/> */}
     </Routes>
   )
 }
