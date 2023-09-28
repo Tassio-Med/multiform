@@ -53,6 +53,7 @@ export const PageForm1 = () => {
           <input
             type="text"
             // autoFocus
+            data-testid="user-name"
             value={state.name}
             onChange={handleNameChange}
           />
@@ -62,6 +63,7 @@ export const PageForm1 = () => {
           <input
             type="text"
             // autoFocus
+            data-testid="user-email"
             value={state.email}
             onChange={handleEmailChange}
           />
