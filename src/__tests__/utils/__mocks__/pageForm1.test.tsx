@@ -1,10 +1,9 @@
-import { render, screen } from '@testing-library/react';
-import { BrowserRouter } from 'react-router-dom';
-import { fireEvent } from '@testing-library/react';
-import { vi } from 'vitest';
-import { PageForm1 } from '../../../pages/PageForm1';
+import { screen, fireEvent } from '@testing-library/react';
 import { renderWithRouter } from './renderWithRouter';
 import App from '../../../App';
+// import { BrowserRouter } from 'react-router-dom';
+// import { vi } from 'vitest';
+// import { PageForm1 } from '../../../pages/PageForm1';
 // import * as router from 'react-router'
 
 
@@ -28,7 +27,6 @@ describe('Testa a página PageForm1', () => {
     fireEvent.change(nomeInput, { target: { value: 'José Henrique' } });
     fireEvent.change(emailInput, { target: { value: 'jose2021@email.com' } });
   
-    // Simula o clique no botão "Próximo"
     const nextButton = screen.getByText('Próximo');
     await user.click(nextButton);
   
