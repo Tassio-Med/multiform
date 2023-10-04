@@ -72,6 +72,7 @@ export const PageForm3 = () => {
         <label>
           Github
           <input
+            data-testid="github"
             type="text"
             // autoFocus
             value={state.github}
@@ -81,6 +82,7 @@ export const PageForm3 = () => {
         <label htmlFor="">
           LinkedIn
           <input
+            data-testid="linkedin"
             type="text"
             // autoFocus
             value={state.linkedin}
@@ -90,6 +92,7 @@ export const PageForm3 = () => {
         <label>
           Telefone
           <input
+          data-testid="telefone"
             type="text"
             // autoFocus
             value={state.telefone}
