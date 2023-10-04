@@ -44,13 +44,14 @@ export const PageForm2 = () => {
   return(
     <Theme>
       <F.Container>
-        <p> Passo 2/3</p>
+        <p>Passo 2/3</p>
         <h1>{ firstName() }, agora selecione o seu nível.</h1>
         <p>Selecione o campo que corresponde ou chegue mais perto do seu tempo na área de tecnologia.</p>
 
         <hr />
 
         <SelectOption
+          data-testid="junior-button" 
           isselected={state.level === 0}
           icon = "🥳"
           title = "Júnior"
@@ -59,6 +60,7 @@ export const PageForm2 = () => {
         />
 
         <SelectOption
+          data-testid="pleno-button" 
           isselected={state.level === 1}
           icon = "😎"
           title = "Pleno"
@@ -67,6 +69,7 @@ export const PageForm2 = () => {
         />
 
         <SelectOption
+          data-testid="senior-button" 
           isselected={state.level === 2}
           icon = "🥸"
           title = "Sênior"
