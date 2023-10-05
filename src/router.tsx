@@ -5,14 +5,14 @@ import { PageForm3 } from "./pages/PageForm3";
 import { PageForm4 } from "./pages/PageForm4";
 // import { NotFound } from "./pages/NotFound";
 
-export const Router = () => {
+export const RouterForm = () => {
   return (
     <Routes>
-      <Route path="/" Component={ PageForm1 }/>
-      <Route path="/page2" Component={ PageForm2 }/>
-      <Route path="/page3" Component={ PageForm3 }/>
-      <Route path="/page4" Component={ PageForm4 }/>
-      {/* <Route path="*" Component={ NotFound }/> */}
+      <Route path="/" element={ <PageForm1 /> } />
+      <Route path="/page2" element={ <PageForm2 /> } />
+      <Route path="/page3" element={ <PageForm3 /> } />
+      <Route path="/page4" element={ <PageForm4 /> } />
+      {/* <Route path="*" element={ <NotFound /> }/> */}
     </Routes>
   )
 }
