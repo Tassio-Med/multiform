@@ -63,7 +63,7 @@ export const PageForm3 = () => {
   return(
     <Theme>
       <F.Container>
-        <p> Passo 3/3</p>
+        <p>Passo 3/3</p>
         <h1>{firstName()}, agora queremos ver os seus projetos e suas principais stacks.</h1>
         <p>Nos informe os dados requeridos abaixo. Todos os dados são importantes para você destacar no processo seletivo!</p>
 
