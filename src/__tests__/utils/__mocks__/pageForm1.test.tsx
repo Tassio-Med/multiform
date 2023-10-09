@@ -28,4 +28,5 @@ describe('Testa a página PageForm1', () => {
     await user.click(nextButton);
     expect(screen.getByText("Passo 2/3")).toBeInTheDocument();
   });
+
 });

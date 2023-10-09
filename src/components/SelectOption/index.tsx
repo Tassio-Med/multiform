@@ -4,6 +4,7 @@ import { SelectProps } from "../../types";
 
 
 export const SelectOption = ({isselected, icon, title, description, onClick}: SelectProps) => {
+  
   return(
     <S.Container onClick={onClick} isselected={isselected} >
       <S.Icon>{icon}</S.Icon>

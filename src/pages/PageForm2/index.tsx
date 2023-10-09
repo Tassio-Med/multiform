@@ -25,7 +25,7 @@ export const PageForm2 = () => {
   
 
   const handleNextStep = () => {
-    state.name !== "" ? navigate('/page3') : alert("Preenha o seus dados!");
+    state.name !== "" ? navigate('/page3') : alert("Preencha o seus dados!");
   }
   
   const setLevel = (level: number) => {
@@ -46,17 +46,17 @@ export const PageForm2 = () => {
       <F.Container>
         <p>Passo 2/3</p>
         <h1>{ firstName() }, agora selecione o seu nível.</h1>
-        <p>Selecione o campo que corresponde ou chegue mais perto do seu tempo na área de tecnologia.</p>
+        <p>Selecione o campo que corresponde ou que chegue mais perto do seu tempo na área de tecnologia.</p>
 
         <hr />
 
         <SelectOption
           data-testid="junior-button" 
+          onClick = {() => setLevel(0)}
           isselected={state.level === 0}
           icon = "🥳"
           title = "Júnior"
-          description = "Sou desenvolvedor com 1 de mercado"
-          onClick = {() => setLevel(0)}
+          description = "Sou desenvolvedor com um ano ou menos de mercado"
         />
 
         <SelectOption
@@ -64,7 +64,7 @@ export const PageForm2 = () => {
           isselected={state.level === 1}
           icon = "😎"
           title = "Pleno"
-          description = "Sou desenvolvedor com um três ou mais anos de mercado"
+          description = "Sou desenvolvedor com dois ou mais anos de mercado"
           onClick = {() => setLevel(1)}
         />
 
@@ -73,7 +73,7 @@ export const PageForm2 = () => {
           isselected={state.level === 2}
           icon = "🥸"
           title = "Sênior"
-          description = "Sou desenvolvedor com um cinco ou mais anos de mercado"
+          description = "Sou desenvolvedor com cinco ou mais anos de mercado"
           onClick = {() => setLevel(2)}
         />
 

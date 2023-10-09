@@ -14,6 +14,7 @@ const initialData: State = {
 
 export const FormContext = createContext<ContextTypes | undefined>(undefined);
 
+
 const formReducer: Reducer<State, Action> = (state, action) => {
   switch(action.type){
     case FormActions.setCurrentStep:
